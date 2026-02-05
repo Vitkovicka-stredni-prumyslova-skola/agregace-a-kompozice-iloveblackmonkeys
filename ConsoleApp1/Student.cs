@@ -8,13 +8,29 @@ namespace AgregaceAKompozice
 
     public Student(string jmeno, string prijmeni, int rocnik)
     {
-        // TODO
+        if(string.IsNullOrWhiteSpace(jmeno))
+           throw new ArgumentException("Jméno nesmí být prázdné.", nameof(jmeno));
+        if(string.IsNullOrWhiteSpace(prijmeni))
+           throw new ArgumentException("Příjmení nesmí být prázdné.", nameof(prijmeni));
+
+        if(rocnik <= 0)
+           throw new ArgumentException("Ročník musí být kladné číslo.", nameof(rocnik));
+
+           Jmeno = jmeno.Trim();
+           Prijmeni = prijmeni.Trim();
+           Rocnik = rocnik;
     }
 
-    public override string ToString()
-    {
-        // TODO
-        return "";
+    public override string ToString() => $"{Prijmeni} {Jmeno} {Rocnik}. ročník";
+
+        internal static bool Console(Student s)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal static void Add(Student s)
+        {
+            throw new NotImplementedException();
+        }
     }
-}
 }
