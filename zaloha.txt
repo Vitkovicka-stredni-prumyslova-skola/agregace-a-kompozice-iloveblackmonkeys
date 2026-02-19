@@ -1,0 +1,24 @@
+namespace AgregaceAKompozice
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            // TEST
+        var s1 = new Student("Jan", "Novák", 2);
+        var s2 = new Student("Eva", "Svobodová", 2);
+
+        var trida = new Trida("2.A");
+
+        trida.PridejStudenta(s1);
+        trida.PridejStudenta(s2);
+
+        trida.TridniKniha.ZapisDochazku(s1, new DateOnly(2026, 1, 12), true);
+        trida.TridniKniha.ZapisDochazku(s1, new DateOnly(2026, 1, 13), false);
+
+        trida.VypisStudenty();
+        trida.TridniKniha.VypisDochazku(s1);
+    }
+            
+        }
+    }

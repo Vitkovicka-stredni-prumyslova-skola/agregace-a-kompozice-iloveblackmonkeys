@@ -7,7 +7,8 @@ namespace AgregaceAKompozice
 
     public ZaznamDochazky(DateOnly datum, bool jePritomen)
     {
-        // TODO
+        Datum = datum;
+        JePritomen = jePritomen;
     }
 
     public override string ToString()
