@@ -19,15 +19,15 @@ namespace AgregaceAKompozice
                 _dochazka[s] = new List<ZaznamDochazky>();
             }
 
-            _dochazka[s].Add(new ZaznamDochazky(datum
+        
+
 
 
     }
 
     public void VypisDochazku(Student s)
     {
-       if(s==null) throw new ArgumentNullException(nameof(s));
-
+        if(s==null) throw new ArgumentNullException(nameof(s));
         if(!_dochazka.ContainsKey(s) || _dochazka[s].Count==0)
             {
                 Console.WriteLine("Žádné záznamy");
